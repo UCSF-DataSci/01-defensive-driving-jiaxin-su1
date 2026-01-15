@@ -14,7 +14,7 @@ def calculate_bmi(weight_kg, height_cm):
     # BUG 1: Used weight/height instead of weight/(height**2)
     # FIX: Added exponent for correct BMI formula
     height_m = height_cm / 100
-    bmi = weight_kg / (height_cm ** 2)
+    bmi = weight_kg / (height_m ** 2)
     return bmi
 
 
@@ -65,7 +65,7 @@ def main():
 
     # Test data: (name, weight_kg, height_cm)
     test_patients = [
-        ("Patient A", 68, 170),   # Should be ~23.5 BMI (normal)
+        ("Patient A", 70, 175),   # Should be ~23.5 BMI (normal)
         ("Patient B", 95, 180),   # Should be ~29.3 BMI (overweight)
         ("Patient C", 52, 160),   # Should be ~20.3 BMI (normal)
         ("Patient D", 102, 175),  # Should be ~33.3 BMI (obese)
